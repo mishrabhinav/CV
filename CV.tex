@@ -1,0 +1,527 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Abhinav Mishra}
+\newcommand{\CVTitle}{}
+\newcommand{\CVNote}{CV compiled on {\today}}
+\newcommand{\CVWebpage}{http://www.mishrabhinav.com}
+\newcommand{\GitHub}{http://www.github.com/mishrabhinav}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{\CVAuthor}
+
+\begin{subtitle}
+\href{https://www.google.co.uk/maps/place/Imperial+College+Union,+Prince+Consort+Rd,+Kensington,+London+SW7+2BB}
+{EB07, Beit Hall, Prince Consort Road, London SW7 2BB, UK}
+\par
+\href{mailto:abhinav.mishra15@imperial.ac.uk}
+{abhinav.mishra15@imperial.ac.uk}
+\,\SubBulletSymbol\,
++44\,7599488182
+\,\SubBulletSymbol\,
+\href{www.mishrabhinav.com}
+{www.mishrabhinav.com}
+\par
+GitHub: \href{\GitHub}{mishrabhinav}
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+\href{http://www.imperial.ac.uk}
+{\textbf{Imperial College London}},
+United Kingdom
+
+\GapNoBreak
+
+\BulletItem
+Bachelor of Engineering (Hons) in
+Computing
+\hfill
+\DatestampYMD{2015}{10}{03} --
+Present
+\begin{detail}
+\end{detail}
+
+\BigGap
+\href{http://www.thekhaitanschool.org}
+{\textbf{Khaitan Public School}},
+India
+
+\GapNoBreak
+\BulletItem
+All India Senior Secondary Certificate Examination
+\href{#}
+{}
+\hfill
+\DatestampYMD{2013}{04}{01} --
+\DatestampYMD{2015}{05}{31}
+\begin{detail}
+\SubBulletItem
+Graduated Top of the Class.
+\SubBulletItem
+Subject Topper in English Core, Physics and Computer Science
+\SubBulletItem
+Overall Percentage: 97\%
+\end{detail}
+
+\GapNoBreak
+\BulletItem
+All India Senior School Examination
+\href{#}
+{}
+\hfill
+\DatestampYMD{2011}{04}{01} --
+\DatestampYMD{2013}{05}{31}
+\begin{detail}
+\SubBulletItem
+Graduated with Certificate of Merit.
+\SubBulletItem
+Cumulative GPA: 10 / 10
+\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WORK EXPERIENCE/PROJECTS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Work Experience / Projects}
+{Work Experience/Projects}
+{PDF:WorkExperience}
+
+\BulletItem
+\href{https://github.com/SomeRandomTeam/hackatbrookes2016}{\textbf{Age of Imperial - Online Territory Game}}
+\hfill
+\DatestampYMD{2016}{02}{13}
+\begin{detail}
+\GapNoBreak
+\SubBulletItem
+Developed an online multiplayer strategy based game at a hackathon.
+\SubBulletItem
+Responsible for the front end of the game.
+\SubBulletItem
+Project based on HTML5, Bootstrap, NodeJS, AngularJS, pixiJS etc.
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\href{https://github.com/mishrabhinav/javachess-pawnrace}{\textbf{Pawn Race - Classic Chessboard Game}}
+\hfill
+\DatestampYMD{2016}{01}{14}
+\begin{detail}
+\GapNoBreak
+\SubBulletItem
+Designed and developed Pawn Racing, a classical chessboard game.
+\SubBulletItem
+Devised an algorithm to evaluate the board state and look for the best possible move using techniques such as Minimax and Alpha-Beta pruning.
+\SubBulletItem
+Project based on Java.
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\href{https://github.com/SomeRandomTeam/hackkings2015}{\textbf{Mymos – Encrypted and Dynamic Web Messenger}}
+\hfill
+\DatestampYMD{2015}{12}{13}
+\begin{detail}
+\GapNoBreak
+\SubBulletItem
+Developed a dynamic and encrypted web messenger at a hackathon.
+\SubBulletItem
+Responsible for the front end and its connection with the back end.
+\SubBulletItem
+Project based on HTML, Bootstrap, NodeJS, AngularJS, MongoDB etc.
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Voyage - Web Browser for Android}
+\hfill
+\DatestampYMD{2012}{05}{10}
+\begin{detail}
+\GapNoBreak
+\SubBulletItem
+Designed and developed a Metro UI based web browser for Android handheld devices.
+\SubBulletItem
+Built to complement the desktop version of a browser.
+\SubBulletItem
+Project based on Java, Android SDK, SQLite, XML etc.
+\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%
+%% ACADEMIC AWARDS %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Academic Achievements}
+{Academic Achievements}
+{PDF:AcademicAchievements}
+
+\BulletItem
+\textbf{Letter of Appreciation}
+\hfill
+\DatestampYMD{2015}{07}{11}
+\newline
+Minister of Human Resource Development,
+Govt. of India
+\begin{detail}
+\SubItem
+For exceptional performance in AISSCE 2015.
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Certificate of Merit} 
+\hfill
+\DatestampYMD{2015}{07}{11}
+\newline
+Central Board of Secondary Education,
+India
+\begin{detail}
+\SubItem
+For being is the top 0.1\% of successful candidates in Physics (AISSCE 2015).
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Joint Entrance Examination - Main}
+\hfill
+\DatestampYM{2015}{07}
+\newline
+Central Board of Secondary Education, India
+\begin{detail}
+\SubItem
+Secured an All India Rank of 633 amongst 1.2 million candidates
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Joint Entrance Examination - Advanced}
+\hfill
+\DatestampYM{2015}{06}
+\newline
+Indian Institute of Technology
+\begin{detail}
+\SubItem
+Secured an All India Rank of 7313 amongst 150 thousand candidates
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{National Standard Examination in Chemistry}
+\hfill
+\DatestampYM{2015}{01}
+\newline
+Indian Association of Physics Teachers
+\begin{detail}
+\SubItem
+Placed in top 1\% of applicants in the state of Uttar Pradesh and qualified for National Chemistry Olympiad.
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Kishore Vaigyanik Protsahan Yojana Fellow}
+\hfill
+\DatestampYM{2014}{08}
+\newline
+IISc. and Department of Science and Technology, Govt. of India
+\begin{detail}
+\SubItem
+All India Rank of 1419 in a National level scholarship exam.
+\end{detail}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WORKSHOPS/HACKATHON %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Workshops/ Hackathons}
+{Workshops / Hackathons}
+{PDF:WorkshopsHackathons}
+
+\BulletItem
+\textbf{Data Analysis using R and Python},
+\hfill
+\DatestampYM{2016}{02}
+\newline
+Imperial College Data Science Society
+\newline
+A 5 session workshop teaching the basics of R and Python programming languages and how to use them efficiently for Data Analysis.
+\GapNoBreak
+
+\BulletItem
+\textbf{Hack@Brookes},
+\hfill
+\DatestampYMD{2016}{02}{12}
+\newline
+Oxford Brookes University
+\newline
+Developed 'Age of Imperial' at this hackathon along with 5 other team members. We were the Second Runner-up.
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Capture the Flag},
+\hfill
+\DatestampYMD{2016}{02}{06}
+\newline
+BAE Systems plc.
+\newline
+Workshop held on system security where we had to solve certain problems as a team of 6.
+
+\GapNoBreak
+
+\BulletItem
+\textbf{HackKing's},
+\hfill
+\DatestampYMD{2015}{12}{12}
+\newline
+King's College London
+\newline
+Developed 'Mymos' at this hackathon along with 3 other team members.
+\GapNoBreak
+
+\BulletItem
+\textbf{Dark Markets: De-anonymising Tor Hidden services},
+\hfill
+\DatestampYMD{2015}{10}{25}
+\newline
+Netcraft Ltd.
+\newline
+Workshop held on Tor hidden services and how to find the source of these services. We had to reveal the source of certain websites given by organisers.
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\section
+{Skills}
+{Skills}
+{PDF:Skills}
+
+Java,
+C++,
+Haskell,
+\newline
+AngularJS,
+pixiJS,
+HTML,
+Bootstrap,
+SQL,
+\newline
+{\LaTeX},
+Adobe Photoshop, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Other Work\newline
+Experience}
+{Other Work Experience}
+{PDF:OtherWorkExperience}
+
+\href{http://www.thekhaitanschool.org}
+{\textbf{Khaitan Public School}},
+Noida, India
+
+\GapNoBreak
+\BulletItem
+President,
+Deus Ex Machina(I.T. Club)
+\hfill
+\DatestampYMD{2014}{04}{01} --
+\DatestampYMD{2015}{05}{31}
+
+\GapNoBreak
+
+\BulletItem
+Vice President,
+Deus Ex Machina(I.T. Club)
+\hfill
+\DatestampYMD{2012}{10}{30} --
+\DatestampYMD{2014}{03}{31}
+
+\GapNoBreak
+
+\BulletItem
+Prefect,
+Student Council
+\hfill
+\DatestampYM{2011}{07} --
+\DatestampYMD{2013}{05}
+
+\GapNoBreak
+
+\BulletItem
+Organiser,
+Unplugged
+\hfill
+\DatestampYM{2011}{12} --
+\DatestampYM{2015}{04}
+\GapNoBreak
+\SubBulletItem
+Planned the annual Inter-School I.T. event for 4 consecutive years.
+
+
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+\BulletItem
+English: Full professional proficiency.
+
+\GapNoBreak
+\BulletItem
+Hindi: Native proficiency.
+
+\GapNoBreak
+\BulletItem
+French: Elementary proficiency.
+
+%%%%%%%%%%%%%%%
+%% INTERESTS %%
+%%%%%%%%%%%%%%%
+
+\section
+{Interests}
+{Interests}
+{PDF:Interests}
+
+Technology, Programming,
+\newline
+Front end development,
+\newline
+Swimming, Football, Table Tennis
+
+%%%%%%%%%%%%%%%%
+%% REFERENCES %%
+%%%%%%%%%%%%%%%%
+
+\section
+{References}
+{References}
+{PDF:References}
+
+\BulletItem
+\textbf{Mr. Nicolai Stawinoga}
+\newline
+Personal Tutor, First Year Coordinator
+\newline
+Imperial College London, U.K.
+\begin{detail}
+\SubItem
+\href{mailto:n.stawinoga13@imperial.ac.uk}
+{n.stawinoga13@imperial.ac.uk}
+\,
+\end{detail}
+
+\GapNoBreak
+
+\BulletItem
+\textbf{Mrs. Poonam Mehta}
+\newline
+Head of Department, Computer Science
+\newline
+Khaitan Public School, India
+\begin{detail}
+\SubItem
+\href{mailto:poonam.mehta15@gmail.com}
+{poonam.mehta15@gmail.com}
+\,
+\end{detail}
+
+\end{body}
+
+\label{LastPage}~
+\end{document}
